@@ -1,0 +1,16 @@
+Linear Technology LTC2990
+=========================
+
+This repository contains a work in progress update of the LTC2990 Linux kernel
+driver to support all possible measurement modes.
+
+The master branch contains a fork of the driver from the kernel mainline v4.6,
+which only supports current measurement mode.
+
+https://github.com/torvalds/linux/commit/df922703574ebe9035045f7c7242a0ec0e11b980
+
+If you are looking for the updated version, please checkout the latest patch-vX
+branch from this repository.
+
+The Makefile in this repository is for building the project as a module with
+the Xilinx Petalinux toolchain.
