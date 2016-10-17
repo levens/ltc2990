@@ -1,0 +1,15 @@
+ltc2990
+
+Required properties:
+- compatible: must be "lltc,ltc2990"
+- reg: I2C slave address
+
+Optional properties:
+- mode: measurement mode (0-7), see Documentation/hwmon/ltc2990 for details
+
+Example:
+ltc2990@4c {
+	compatible = "lltc,ltc2990";
+	mode = <7>;
+	reg = <0x4c>;
+};
