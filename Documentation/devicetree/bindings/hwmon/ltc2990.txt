@@ -1,0 +1,28 @@
+ltc2990
+
+Required properties:
+- compatible: Must be "lltc,ltc2990"
+- reg: I2C slave address
+
+Optional properties:
+- lltc,mode:
+	Sets the chip's measurement mode, defaults to <6> if unset.
+
+	The following measurements are available in each mode:
+
+	0: V1, V2, TR2
+	1: V1-V2, TR2
+	2: V1-V2, V3, V4
+	3: TR1, V3, V4
+	4: TR1, V3-V4
+	5: TR1, TR2
+	6: V1-V2, V3-V4
+	7: V1, V2, V3, V4
+
+Example:
+
+ltc2990@4c {
+	compatible = "lltc,ltc2990";
+	reg = <0x4c>;
+	lltc,mode = <7>;
+};
